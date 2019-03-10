@@ -1,9 +1,8 @@
 # Advanced Pattern Recognition In Language (A.P.R.I.L.)
 #### Version 1.0
----
+
 ## Description
 
----
 A.P.R.I.L. is a Natural Language Processing Chatbot
 writtern in Java.
 
@@ -15,3 +14,6 @@ writtern in Java.
 - [ ] Get Random response
 - [ ] Export inputs and responses to text file
 - [ ] Add more keywords and responses
+
+### Bugs / Fixes
+- [ ] None so far
