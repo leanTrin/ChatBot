@@ -1,8 +1,20 @@
 import java.util.Scanner;
+import java.util.Random;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class main {
+
+  private static String codeName = "A.P.R.I.L.";
+
   public static void main(String[] args) {
-    print(getResponse(removeSymbols(input("statement"))));
+    //
+    // print("Hello, I'm " + codeName + ", how can I help you?");
+    //
+    // while(true) {
+    //   print("<" + codeName + "> "+ getResponse(removeSymbols(input("<YOU>"))));
+    // }
+    int test = fileLineLength(new File("test.txt"));
   }
 
 
@@ -39,6 +51,8 @@ public class main {
 
 
   private static String getResponse(String statement) {
+
+    // TODO: make it work for plural words
     String[][] response = {
       {"cat","Tell me more about your cat"},
       {"dog","Tell me more about your dog"},
@@ -62,4 +76,40 @@ public class main {
     //   (findKey(statement,"test")) ? "Test away." :
     //   "what";
   }
+
+  private static int fileLineLength(File file) throws FileNotFoundException {
+    int count = 0;
+    try {
+      for(Scanner sc = new Scanner(file); sc.hasNext(); ) {
+        String line = sc.nextLine();
+        print(line);
+      }
+    } catch(FileNotFoundException e) {
+      print("test");
+    }
+
+    return 0;
+  }
+
+
+
+  // private static String randomResponse() {
+  //   String result = null;
+  //   try {
+  // 			Scanner scanner = new Scanner(new File("test.txt"));
+  //       int n = 0;
+  //       Random rand = new Random();
+  // 			while (scanner.hasNextLine()) {
+  //         ++n;
+  //
+  //         if(rand.nextInt(n) == 0) {
+  //           result = scanner.nextLine();
+  //         }
+  // 			}
+  // 			scanner.close();
+  // 		} catch (FileNotFoundException e) {
+  // 			e.printStackTrace();
+  // 		}
+  //     return result;
+  // 	}
 }
