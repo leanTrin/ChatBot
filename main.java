@@ -12,13 +12,7 @@ public class main {
 
   private static String codeName = "A.P.R.I.L.";
 
-  public static void main(String[] args) {
-    //
-    // print("Hello, I'm " + codeName + ", how can I help you?");
-    //
-    // while(true) {
-    //   print("<" + codeName + "> "+ getResponse(removeSymbols(input("<YOU>"))));
-    // }
+  public static void main(String[] args) {  
 		try {
 			print(getRandomResponse());
 		} catch(IOException e) {
@@ -48,7 +42,14 @@ public class main {
     Scanner s = new Scanner(System.in);
     return s.nextLine();
   }
-
+	/**
+	 * Remove Symbols
+	 *	removes the symbols like perions and exclamation points
+	 *
+	 * @param String-statement the string that you want to remove symbols from
+	 *
+	 * @return returns the String statement but without the symbols
+	 **/
   private static String removeSymbols(String statement) {
     String[] sym = {"!","@","#","$","%","^","&","*","(",")","?",".",","}; // TODO: add the rest
     //TODO: remove words with [`] like john's
