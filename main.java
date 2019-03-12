@@ -20,7 +20,7 @@ public class main {
     //   print("<" + codeName + "> "+ getResponse(removeSymbols(input("<YOU>"))));
     // }
 		try {
-			getResponse();
+			print(getRandomResponse());
 		} catch(IOException e) {
 			print("error");
 		}
@@ -79,13 +79,17 @@ public class main {
       }
     }
     return null;
-    // return (findKey(statement,"cat") || findKey(statement,"dog")) ? "Tell me more about your pets." :
-    //   (findKey(statement,"weather")) ? "I think the weather is nice." :
-    //   (findKey(statement,"school")) ? "School is cool." :
-    //   (findKey(statement,"test")) ? "Test away." :
-    //   "what";
   }
 
+	/**
+	 * amount of lines in text file
+	 *
+	 *
+	 * @param File-file a text file
+	 *
+	 * @return an int of how many lines in a text
+	 *
+	 */
 	private static int fileLineLength(File file) throws IOException {
 		int count = 0;
  
@@ -99,7 +103,15 @@ public class main {
 		return count;
 	}
 
-	private static String getRandomResponse() throws IOException{
+	/**
+	 * Get random IDontKnow Response
+	 * 
+	 * Get a random string from a text file
+	 * 
+	 * @return returns the random line from the file
+	 * @throws IoException
+	*/
+	private static String getRandomResponse() throws IOException{ // TODO: returns null ??
 
 		Random random = new Random();
 
@@ -120,7 +132,6 @@ public class main {
 		br.close();
 		return line;
 	}
-
 
 
 
