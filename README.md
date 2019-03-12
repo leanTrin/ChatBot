@@ -16,5 +16,4 @@ writtern in Java.
 - [ ] Add more keywords and responses
 
 ### Bugs / Fixes
-- [ ] actual and formal argument lists differ in length
-	- error with the getRandomResponse function
+- [ ] the getRandomResponse gets null at times 
