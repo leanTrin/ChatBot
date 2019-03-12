@@ -12,20 +12,36 @@ public class main {
 
   private static String codeName = "A.P.R.I.L.";
 
-  public static void main(String[] args) {  
+  public static void main2(String[] args) {  
 		try {
 			print(getRandomResponse());
 		} catch(IOException e) {
 			print("error");
 		}
   }
-
+	// NOTE: This is a test main page
+	public static void main(String[] args) {
+		print(String.format("<%s>: How may i help you?",codeName));
+		while(true) {
+			print(getResponse(removeSymbols(input("<YOU>"))));
+		
+		}
+	}
 
   private static void print(String statement) {
     System.out.println(statement);
   }
 
 
+	/**
+	 * Find key
+	 *	checks if word is in a statement
+	 *
+	 * @param String-statement 
+	 * @param String-key the word that you are looking for
+	 *
+	 * @return returns true if the statement has the word
+	 **/
   private static boolean findKey(String statement, String key) {
     String[] words = statement.split(" ");
     for (String word : words) {
@@ -79,7 +95,10 @@ public class main {
         return res;
       }
     }
-    return null;
+
+		// get random response when there are no keyword found in the statement
+		try{return getRandomResponse();} catch(IOException e) { print("Something went wrong.");}
+		return null;
   }
 
 	/**

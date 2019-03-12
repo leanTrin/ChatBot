@@ -7,13 +7,14 @@ A.P.R.I.L. is a Natural Language Processing Chatbot
 writtern in Java.
 
 ### TODO:
-- [ ] Runnable
-- [ ] Finish remove symbol function
-  - [ ] add more symbols
+- [x] Runnable
+- [x] Finish remove symbol function
+  - [x] add more symbols
   - [ ] remove words with (')
-- [ ] Get Random response
+- [x] Get Random response
 - [ ] Export inputs and responses to text file
 - [ ] Add more keywords and responses
+- [ ] use Json for getting and stroing responses 
 
 ### Bugs / Fixes
 - [ ] the getRandomResponse gets null at times 
