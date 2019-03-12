@@ -93,23 +93,4 @@ public class main {
 
 
 
-  // private static String randomResponse() {
-  //   String result = null;
-  //   try {
-  // 			Scanner scanner = new Scanner(new File("test.txt"));
-  //       int n = 0;
-  //       Random rand = new Random();
-  // 			while (scanner.hasNextLine()) {
-  //         ++n;
-  //
-  //         if(rand.nextInt(n) == 0) {
-  //           result = scanner.nextLine();
-  //         }
-  // 			}
-  // 			scanner.close();
-  // 		} catch (FileNotFoundException e) {
-  // 			e.printStackTrace();
-  // 		}
-  //     return result;
-  // 	}
 }
