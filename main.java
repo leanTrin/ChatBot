@@ -2,6 +2,11 @@ import java.util.Scanner;
 import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+
 
 public class main {
 
@@ -14,7 +19,11 @@ public class main {
     // while(true) {
     //   print("<" + codeName + "> "+ getResponse(removeSymbols(input("<YOU>"))));
     // }
-    int test = fileLineLength(new File("test.txt"));
+		try {
+			getResponse();
+		} catch(IOException e) {
+			print("error");
+		}
   }
 
 
@@ -77,19 +86,42 @@ public class main {
     //   "what";
   }
 
-  private static int fileLineLength(File file) throws FileNotFoundException {
-    int count = 0;
-    try {
-      for(Scanner sc = new Scanner(file); sc.hasNext(); ) {
-        String line = sc.nextLine();
-        print(line);
-      }
-    } catch(FileNotFoundException e) {
-      print("test");
-    }
+	private static int fileLineLength(File file) throws IOException {
+		int count = 0;
+ 
+		BufferedReader br = new BufferedReader(new InputStreamReader( new FileInputStream(file)));
+		String line = null;
+		while ((line = br.readLine()) != null) {
+			count++;
+		}
+	 
+		br.close();
+		return count;
+	}
 
-    return 0;
-  }
+	private static String getRandomResponse() throws IOException{
+
+		Random random = new Random();
+
+		int randInt = 0;
+		try { randInt = random.nextInt(fileLineLength(new File("test.txt")) + 1);}
+		catch (IOException e) {print("IOException");}
+
+		int count = 0;	
+		BufferedReader br = new BufferedReader(new InputStreamReader( new FileInputStream("test.txt")));
+		String line = null;
+		while ((line = br.readLine()) != null) {
+			if(count == randInt) {
+				return line;	
+			}
+			count++;
+		}
+	 
+		br.close();
+		return line;
+	}
+
+
 
 
 
