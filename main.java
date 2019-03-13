@@ -53,8 +53,7 @@ public class main {
   }
 
 
-  private static String input(String label) {
-    System.out.printf(label + ": ");
+  private static String input(String label) { System.out.printf(label + ": ");
     Scanner s = new Scanner(System.in);
     return s.nextLine();
   }
