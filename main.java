@@ -1,21 +1,32 @@
+import java.io.*;
+import java.util.*;
+
 public class main {
+	public static void main(String[] args) {
+	}
 
-  private static String codeName = "April";
+	/* Creates a print statement simmilar to pythons*/
+	private static void print(Object statement) {
+		System.out.println(statement);
+	}
 
-  public static void main(String[] args) {  
-		//import managers
-		core cr = new core();		
-		fileManager fileMan = new fileManager();
-		responseManager resMan = new responseManager();
-		
-		cr.print(String.format("<%s> Hi there!",codeName));
-		while(true) {	
-			String userInput = cr.input("<YOU>");
-			String cleanInput = resMan.removeSymbols(userInput);
-			String response = resMan.getResponse(cleanInput);
-			cr.print(String.format("<%s> %s", codeName, response));
+	/* Creates an input grabber simmilar to pythons raw_input and input*/
+	private static String input(Object label) {
+		System.out.printf(String.format("%s: ",label));
+		Scanner raw_input = new Scanner(System.in);
+		return raw_input.nextLine();
+	}
 
+	
+	/* Finds if a word is in a string*/
+	private static boolean findKey(String statement, String key, boolean keyMultiple) {
+		String[] words = statement.split(" ");
+		for(String word : words) {
+			if(word.toLowerCase().equals(key.toLowerCase())) {
+				return true;
+			}
+		}	
+		return false;
+	}	
 
-		}
-  }
 }

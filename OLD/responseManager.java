@@ -18,6 +18,14 @@ public class responseManager {
     for (String Symbol  : sym ) {
         statement = statement.replace(Symbol,"");
     }
+		List<String> = new ArrayList<String>();
+		for(String word: statement.toLowerCase()) {
+			// word that is plural that ends with s
+			if(word.endsWith("s")) {
+				
+				
+			}	
+		}
     return statement;
   }
   public static String getResponse(String statement) {
@@ -31,14 +39,10 @@ public class responseManager {
 			{"leandro","I think he is cool."},
 			{"hello","Hi"}
     };
+		
+				
 
-    for(String[] options: response) {
-      String keyword = options[0].toLowerCase();
-      String res = options[1];
 
-      if(findKey(statement.toLowerCase(),keyword)) {
-        return res;
-      }
     }
 
 		// get random response when there are no keyword found in the statement
