@@ -19,14 +19,26 @@ public class main {
 
 	
 	/* Finds if a word is in a string*/
-	private static boolean findKey(String statement, String key, boolean keyMultiple) {
+	private static boolean findKey(String statement, String key) { // the key can be a word or multiple words
 		String[] words = statement.split(" ");
-		for(String word : words) {
-			if(word.toLowerCase().equals(key.toLowerCase())) {
-				return true;
+		String[] keys = key.split(" ");
+
+		for(int i = 0; i < words.length; i++) {
+			int count = 0;
+			for(int j = 0; j < keys.length; j++) {
+				try {
+				
+					if(words[i+j].toLowerCase().equals(keys[j].toLowerCase())) {
+						count ++;
+					}
+				} catch(ArrayIndexOutOfBoundsException e) {return false;}
 			}
-		}	
+			if(count == keys.length) {
+				return true;	
+			}
+		}
 		return false;
+
 	}	
 
 }
