@@ -3,6 +3,7 @@ This program is a natural language chatbot that runs in pure java.
 
 
 # Development
+- [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
 - [ ] class for file management
