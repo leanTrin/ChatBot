@@ -12,3 +12,12 @@ This program is a natural language chatbot that runs in pure java.
 	- getting random lines from the file
 	- how many lines are in a file
 	- parsing file data
+- [ ] self learning
+- [ ] json data structure
+
+# Bugs
+- nothing at the moment
+
+
+# TODO
+- empty at the moment
