@@ -3,19 +3,25 @@ import java.util.*;
 
 public class main {
 	public static void main(String[] args) {
+		print(getResponse(input("<YOU>")));
 	}
+
+
 
 	/* Creates a print statement simmilar to pythons*/
 	private static void print(Object statement) {
 		System.out.println(statement);
 	}
 
+
+
 	/* Creates an input grabber simmilar to pythons raw_input and input*/
 	private static String input(Object label) {
 		System.out.printf(String.format("%s: ",label));
-		Scanner raw_input = new Scanner(System.in);
-		return raw_input.nextLine();
+    Scanner s = new Scanner(System.in);
+    return s.nextLine();
 	}
+
 
 	
 	/* Finds if a word is in a string*/
@@ -25,6 +31,7 @@ public class main {
 
 		for(int i = 0; i < words.length; i++) {
 			int count = 0;
+
 			for(int j = 0; j < keys.length; j++) {
 				try {
 				
@@ -39,6 +46,36 @@ public class main {
 		}
 		return false;
 
-	}	
+	}
+	
+
+
+	/* A simple get Response using a few keywords*/
+	private static String getResponse(String statement) {
+		return ( findKey(statement,"dog") || findKey(statement,"dogs") ) ? "Tell me more about the dog." :
+			( findKey(statement,"cat") || findKey(statement,"cats") ) ? "Tell me more about the cat." :
+			( findKey(statement,"weather") ) ? "The weather is nice.":
+			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
+			randomResponse();
+	}
+
+
+
+	/* Gets a random string from a list of responses*/
+	private static String randomResponse() {
+		String[] responses = {
+			"idk.",
+			"ok.",
+			"tell me more.",
+			"elaborate.",
+			"let's talk about something else"
+		};
+
+		Random rand = new Random();
+		int randInt = rand.nextInt(responses.length);
+
+		return responses[randInt];
+	}
+
 
 }
