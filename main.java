@@ -2,8 +2,20 @@ import java.io.*;
 import java.util.*;
 
 public class main {
+
+	private static String codename = "April";
+
+
+
+	/* Main Program*/
 	public static void main(String[] args) {
-		print(getResponse(input("<YOU>")));
+		print(String.format("<%s>: Hello!", codename));
+		while(true) {
+		
+			String user = input("<YOU>");	
+			String response = getResponse(user);
+			print(String.format("<%s>: %s",codename, response));
+		}	
 	}
 
 
@@ -56,7 +68,8 @@ public class main {
 			( findKey(statement,"cat") || findKey(statement,"cats") ) ? "Tell me more about the cat." :
 			( findKey(statement,"weather") ) ? "The weather is nice.":
 			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
-			randomResponse();
+			( findKey(statement,"how are you") ) ? "I'm doing well.":
+			RandomResponse();
 	}
 
 
@@ -68,7 +81,10 @@ public class main {
 			"ok.",
 			"tell me more.",
 			"elaborate.",
-			"let's talk about something else"
+			"let's talk about something else",
+			"that's cool.",
+			"cool.",
+			"I'm bored."
 		};
 
 		Random rand = new Random();
