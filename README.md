@@ -6,10 +6,10 @@ This program is a natural language chatbot that runs in pure java.
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
-- [ ] Implement FileManagement class to the main class
+- [x] Implement FileManagement class to the main class
 - [ ] class for file management
 	- [x] opening files
-	- [ ] logging information in a file
+	- [x] logging information in a file
 	- [x] getting random lines from the file
 	- [x] how many lines are in a file
 	- [ ] parsing file data
@@ -17,7 +17,7 @@ This program is a natural language chatbot that runs in pure java.
 - [ ] json data structure
 
 # Bugs
-- nothing at the moment
+- -Xlint warning when compiling
 
 
 # TODO
