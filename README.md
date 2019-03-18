@@ -6,6 +6,7 @@ This program is a natural language chatbot that runs in pure java.
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
+- [ ] Implement FileManagement class to the main class
 - [ ] class for file management
 	- [x] opening files
 	- [ ] logging information in a file
