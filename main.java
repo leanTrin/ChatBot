@@ -10,6 +10,7 @@ public class main {
 
 	/* Main Program*/
 	public static void main(String[] args) {
+		FileManager FileManager = new FileManager();
 		print(String.format("<%s>: Hello!", codename));
 		while(true) {
 		
@@ -70,7 +71,8 @@ public class main {
 			( findKey(statement,"weather") ) ? "The weather is nice.":
 			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
 			( findKey(statement,"how are you") ) ? "I'm doing well.":
-            ( findKey(statement,"your version") || (findKey(statement,"you") && findKey(statement,"version") ) ) ? String.format("I am version %s",version) :
+			( findKey(statement,"your name") || findKey(statement,"who are you") ) ? String.format("My name is %s",codename):
+			( findKey(statement,"your version") || (findKey(statement,"you") && findKey(statement,"version") ) ) ? String.format("I am version %s",version) :
 			randomResponse();
 	}
 
@@ -78,22 +80,8 @@ public class main {
 
 	/* Gets a random string from a list of responses*/
 	private static String randomResponse() {
-		String[] responses = {
-			"idk.",
-			"ok.",
-			"tell me more.",
-			"elaborate.",
-			"let's talk about something else",
-			"that's cool.",
-			"cool.",
-			"I'm bored."
-		};
-
-		Random rand = new Random();
-		int randInt = rand.nextInt(responses.length);
-
-		return responses[randInt];
+		String filename = "random.txt";
+		FileManager fm = new FileManager();
+		return fm.randChoice(fm.openFile(filename));	
 	}
-
-
 }
