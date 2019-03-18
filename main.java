@@ -4,6 +4,7 @@ import java.util.*;
 public class main {
 
 	private static String codename = "April";
+    private static String version = "1.0";
 
 
 
@@ -69,7 +70,8 @@ public class main {
 			( findKey(statement,"weather") ) ? "The weather is nice.":
 			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
 			( findKey(statement,"how are you") ) ? "I'm doing well.":
-			RandomResponse();
+            ( findKey(statement,"your version") || (findKey(statement,"you") && findKey(statement,"version") ) ) ? String.format("I am version %s",version) :
+			randomResponse();
 	}
 
 
