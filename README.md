@@ -7,6 +7,7 @@ This program is a natural language chatbot that runs in pure java.
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
 - [x] Implement FileManagement class to the main class
+- [ ] Remove symbols in the users input text
 - [ ] class for file management
 	- [x] opening files
 	- [x] logging information in a file
@@ -17,7 +18,9 @@ This program is a natural language chatbot that runs in pure java.
 - [ ] json data structure
 
 # Bugs
-- -Xlint warning when compiling
+- -Xlint warning when compiling (SOLVED)
+		-  [static] static method should be qualified by type name, FileManager, instead of by an expression
+
 
 
 # TODO

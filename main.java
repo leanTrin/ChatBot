@@ -80,8 +80,7 @@ public class main {
 
 	/* Gets a random string from a list of responses*/
 	private static String randomResponse() {
-		String filename = "random.txt";
-		FileManager fm = new FileManager();
-		return fm.randChoice(fm.openFile(filename));	
+		String filename = "data/random.txt";
+		return FileManager.randChoice(FileManager.openFile(filename));	
 	}
 }

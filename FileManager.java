@@ -56,6 +56,7 @@ public class FileManager {
 
 
 	/* Gets random choice from a list or an array*/	
+	@SuppressWarnings("unchecked")
 	public static String randChoice(Object lists) {
 		Random rand = new Random();
 
