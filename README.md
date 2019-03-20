@@ -2,7 +2,17 @@
 This program is a natural language chatbot that runs in pure java.
 
 
-# Development
+# Development Itenerary
+1. Pre-process
+	- removal of words that are not required/distort the context.
+2. Entity Extraction
+	- extracting nouns like companies, places, product, or dates.
+3. Phrase / Keyword Extraction
+	- Extract important keywords / phrases
+4. Classification / Text Classification
+	- classifying text into defined categories
+
+# TODO
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
@@ -20,8 +30,3 @@ This program is a natural language chatbot that runs in pure java.
 # Bugs
 - -Xlint warning when compiling (SOLVED)
 		-  [static] static method should be qualified by type name, FileManager, instead of by an expression
-
-
-
-# TODO
-- empty at the moment
