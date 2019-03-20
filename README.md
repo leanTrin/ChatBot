@@ -30,3 +30,9 @@ This program is a natural language chatbot that runs in pure java.
 # Bugs
 - -Xlint warning when compiling (SOLVED)
 		-  [static] static method should be qualified by type name, FileManager, instead of by an expression
+
+Alisa
+Ruby
+Aria
+(A.P.R.I.L.) Advanced Pattern Recognition in Interactive Language
+(I.R.I.S.) Informative Response on Interactive Systems
