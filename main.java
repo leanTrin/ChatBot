@@ -39,27 +39,7 @@ public class main {
 
 	
 	/* Finds if a word is in a string*/
-	private static boolean findKey(String statement, String key) { // the key can be a word or multiple words
-		String[] words = statement.split(" ");
-		String[] keys = key.split(" ");
-
-		for(int i = 0; i < words.length; i++) {
-			int count = 0;
-
-			for(int j = 0; j < keys.length; j++) {
-				try {
-				
-					if(words[i+j].toLowerCase().equals(keys[j].toLowerCase())) {
-						count ++;
-					}
-				} catch(ArrayIndexOutOfBoundsException e) {return false;}
-			}
-			if(count == keys.length) {
-				return true;	
-			}
-		}
-		return false;
-
+	private static boolean findKey(String statement, String keys) { // the key can be a word or multiple words
 	}
 	
 
@@ -72,6 +52,7 @@ public class main {
 			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
 			( findKey(statement,"how are you") ) ? "I'm doing well.":
 			( findKey(statement,"your name") || findKey(statement,"who are you") ) ? String.format("My name is %s",codename):
+			( findKey(statement,"hello *") ) ? "asdfghjkl;":
 			( findKey(statement,"your version") || (findKey(statement,"you") && findKey(statement,"version") ) ) ? String.format("I am version %s",version) :
 			randomResponse();
 	}

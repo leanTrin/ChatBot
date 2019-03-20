@@ -13,6 +13,7 @@ This program is a natural language chatbot that runs in pure java.
 	- classifying text into defined categories
 
 # TODO
+- [ ] remove punctuations and stop words
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
