@@ -46,6 +46,7 @@ public class main {
 
 	/* A simple get Response using a few keywords*/
 	private static String getResponse(String statement) {
+		/* if(found key) "String" else */
 		return ( findKey(statement,"dog") || findKey(statement,"dogs") ) ? "Tell me more about the dog." :
 			( findKey(statement,"cat") || findKey(statement,"cats") ) ? "Tell me more about the cat." :
 			( findKey(statement,"weather") ) ? "The weather is nice.":
