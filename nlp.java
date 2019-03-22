@@ -2,13 +2,32 @@ import java.util.*;
 import java.io.*;
 public class nlp {
 	public static void main(String[] arguments) {
+		String text = "this is the text that im going to use in the list";
+		List<String> stext = tokenize(text);
+		for(String test: stopwords(stext)) {
+		}
 	}
 
 
 
 	/* Tokenize a string */
-	private static String[] tokenize(String text) {
-		return text.split(" ");
+	private static List<String> tokenize(String text) {
+		String[] split = text.split(" ");
+		return Arrays.asList(split);
+	}
+
+	/* Remove stop words */
+	private static List<String> stopwords(List<String> text) {
+		/*
+		 * TODO: this needs to be done
+		 *
+		 * remove words that are common in the text like (the, is, etc)
+		 *
+		 *
+		 *
+		 *
+		 *
+		 * */
 	}
 
 
