@@ -13,12 +13,12 @@ This program is a natural language chatbot that runs in pure java.
 	- classifying text into defined categories
 
 # TODO
-- [ ] remove punctuations and stop words
+- [x] remove punctuations and stop words
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
 - [x] Implement FileManagement class to the main class
-- [ ] Remove symbols in the users input text
+- [x] Remove symbols in the users input text
 - [ ] class for file management
 	- [x] opening files
 	- [x] logging information in a file
