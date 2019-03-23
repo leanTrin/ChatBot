@@ -37,32 +37,6 @@ public class main {
 	}
 
 
-	
-	/* Finds if a word is in a string*/
-	private static boolean findKey(String statement, String keys) { // the key can be a word or multiple words
-	}
-	
 
 
-	/* A simple get Response using a few keywords*/
-	private static String getResponse(String statement) {
-		/* if(found key) "String" else */
-		return ( findKey(statement,"dog") || findKey(statement,"dogs") ) ? "Tell me more about the dog." :
-			( findKey(statement,"cat") || findKey(statement,"cats") ) ? "Tell me more about the cat." :
-			( findKey(statement,"weather") ) ? "The weather is nice.":
-			( findKey(statement,"leandro") ) ? "I like Leandro, he created me.":
-			( findKey(statement,"how are you") ) ? "I'm doing well.":
-			( findKey(statement,"your name") || findKey(statement,"who are you") ) ? String.format("My name is %s",codename):
-			( findKey(statement,"hello *") ) ? "asdfghjkl;":
-			( findKey(statement,"your version") || (findKey(statement,"you") && findKey(statement,"version") ) ) ? String.format("I am version %s",version) :
-			randomResponse();
-	}
-
-
-
-	/* Gets a random string from a list of responses*/
-	private static String randomResponse() {
-		String filename = "data/random.txt";
-		return FileManager.randChoice(FileManager.openFile(filename));	
-	}
 }
