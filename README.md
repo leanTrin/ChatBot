@@ -14,6 +14,7 @@ This program is a natural language chatbot that runs in pure java.
 
 # TODO
 - [x] remove punctuations and stop words
+- [x] Lemmatization
 - [x] can run
 - [x] getting a response from the Bot
 - [x] getting a random response from the bot
