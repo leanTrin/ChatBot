@@ -2,41 +2,38 @@ import java.io.*;
 import java.util.*;
 
 public class main {
+	private static String codename = "April";	
 
-	private static String codename = "April";
-    private static String version = "1.0";
-
-
-
-	/* Main Program*/
+	/* Main Program */
 	public static void main(String[] args) {
-		FileManager FileManager = new FileManager();
-		print(String.format("<%s>: Hello!", codename));
-		while(true) {
+		uprint(codename,"Hello there!");
+		while (true) {
+			String user = input("<YOU>");
+			List<String> lemm = Nlp.lemmatize(Nlp.stopwords(Nlp.tokenize(Nlp.cleanText(user))));
+			String response = ResponseManager.getResponse(lemm);
+			if(response.equals("{exit}")) {	
+				uprint(codename,"bye");
+				System.exit(0);
+			}
+			uprint(codename,response);
+		}
 		
-			String user = input("<YOU>");	
-			String response = getResponse(user);
-			print(String.format("<%s>: %s",codename, response));
-		}	
 	}
 
-
-
-	/* Creates a print statement simmilar to pythons*/
+	private static void uprint(Object user, Object response) {
+		print(String.format("<%s>: %s",user,response));	
+	}
+	/* Creates a print statement simmilar to python */
 	private static void print(Object statement) {
 		System.out.println(statement);
 	}
 
 
 
-	/* Creates an input grabber simmilar to pythons raw_input and input*/
+	/* Creates an input grabber simmilar to pythons raw_input and input */
 	private static String input(Object label) {
 		System.out.printf(String.format("%s: ",label));
     Scanner s = new Scanner(System.in);
     return s.nextLine();
 	}
-
-
-
-
 }
