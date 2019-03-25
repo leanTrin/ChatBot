@@ -1,18 +1,7 @@
 import java.util.*;
 import java.io.*;
-public class nlp {
-	public static void main(String[] arguments) {
-		String text = "My name is Leandro and i love to go running when it is warm outside.";
-		String clean = cleanText(text);
-		List<String> token = tokenize(clean);
-		List<String> stopW = stopwords(token);
-		List<String> lemm = lemmatize(stopW);
-		for(String words: lemm) {
-			System.out.println(words);
-		}
-	}
 
-
+public class Nlp {
 
 	/* Tokenize a string */
 	public static List<String> tokenize(String text) {

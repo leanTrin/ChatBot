@@ -3,4 +3,4 @@ cat	cats are so cool.
 leandro	Leandro is cool, he is my creator
 version	I am still at version 1.o
 school	school is cool
-
+bye	{exit}

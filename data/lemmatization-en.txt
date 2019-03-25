@@ -4704,6 +4704,17 @@ buzz-word	buzz-words
 bv	bvs
 byelaw	byelaws
 bye-law	bye-laws
+bye	goodbye
+bye	adieu
+bye	adios
+bye	arrivederci
+bye	bye-bye
+bye	cherio
+bye	good-by
+bye	goodby
+bye	goodbye
+bye	good-bye
+bye	farewell
 by-election	by-elections
 bygone	bygones
 bylaw	bylaws
