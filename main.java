@@ -3,6 +3,7 @@ import java.util.*;
 
 public class main {
 	private static String codename = "April";	
+	private static String user = "Leandro";
 
 	/* Main Program */
 	public static void main(String[] args) {
@@ -11,6 +12,11 @@ public class main {
 			String user = input("<YOU>");
 			List<String> lemm = Nlp.lemmatize(Nlp.stopwords(Nlp.tokenize(Nlp.cleanText(user))));
 			String response = ResponseManager.getResponse(lemm);
+
+
+			// Codenames: parsing the text and replacing data
+			response = response.replace("{user}", user);
+			response = response.replace("{codename}",codename);
 			if(response.equals("{exit}")) {	
 				uprint(codename,"bye");
 				System.exit(0);
