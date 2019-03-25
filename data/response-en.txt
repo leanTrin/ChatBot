@@ -4,3 +4,5 @@ leandro	Leandro is cool, he is my creator
 version	I am still at version 1.o
 school	school is cool
 bye	{exit}
+code-name	my codename is {codename}
+codename	My codename is {codename}
