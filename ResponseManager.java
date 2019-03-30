@@ -35,4 +35,7 @@ public class ResponseManager {
 		String filename = "data/random.txt";
 		return FileManager.randChoice(FileManager.openFile(filename));	
 	}
+	public static String codeReplacement() {
+		/* Replace certain keyword with other words like {codename} = April */	
+	}
 }
