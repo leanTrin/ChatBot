@@ -37,5 +37,7 @@ public class ResponseManager {
 	}
 	public static String codeReplacement() {
 		/* Replace certain keyword with other words like {codename} = April */	
+		System.out.println("test");
+		return "test";
 	}
 }
