@@ -4,6 +4,7 @@ import java.util.*;
 public class main {
 	private static String codename = "April";	
 	private static String user = "Leandro";
+	private static String version = "Version 1.0";
 
 	/* Main Program */
 	public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class main {
 			// Codenames: parsing the text and replacing data
 			response = response.replace("{user}", user);
 			response = response.replace("{codename}",codename);
+			response = response.replace("{version}".version);
 			if(response.equals("{exit}")) {	
 				uprint(codename,"bye");
 				System.exit(0);
