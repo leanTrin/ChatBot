@@ -80,7 +80,7 @@ public class FileManager {
 		try {	
 			BufferedWriter br = new BufferedWriter( new FileWriter(new File(filename), true));
 
-		br.write(line);
+		br.write(line + "\n");
 		br.close();
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -8,4 +8,3 @@ code-name	my codename is {codename}
 codename	My codename is {codename}
 weather	The weather is nice out.
 code	Coding is cool.
-

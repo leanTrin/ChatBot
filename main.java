@@ -18,7 +18,8 @@ public class main {
 			// Codenames: parsing the text and replacing data
 			response = response.replace("{user}", user);
 			response = response.replace("{codename}",codename);
-			response = response.replace("{version}".version);
+			response = response.replace("{version}",version);
+			FileManager.appendFile("append.txt",String.join(" ", lemm));
 			if(response.equals("{exit}")) {	
 				uprint(codename,"bye");
 				System.exit(0);
